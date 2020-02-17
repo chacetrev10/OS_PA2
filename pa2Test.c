@@ -89,57 +89,6 @@ int main(){
 
    
 
-/*
-fd = open("/dev/pa2_character_device", O_RDWR);             // Open the device with read/write access
-   if (fd < 0){
-      perror("Failed to open the device...");
-      return errno;
-   }
-   printf("Type in a short string to send to the kernel module:\n");
-   scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
-   printf("Writing message to the device [%s].\n", stringToSend);
-   ret = write(fd, stringToSend, strlen(stringToSend)); // Send the string to the LKM
-   if (ret < 0){
-      perror("Failed to write the message to the device.");
-      return errno;
-   }
-    printf("Type in a short string to send to the kernel module:\n");
-   scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
-   printf("Writing message to the device [%s].\n", stringToSend);
-   ret = write(fd, stringToSend, strlen(stringToSend)); // Send the string to the LKM
-   if (ret < 0){
-      perror("Failed to write the message to the device.");
-      return errno;
-   }
- 	ret = llseek(5,0);
-
-   printf("Press ENTER to read back from the device...\n");
-   getchar();
- 
-   printf("Reading from the device...\n");
-   ret = read(fd, receive,10);        // Read the response from the LKM
-   if (ret < 0){
-      perror("Failed to read the message from the device.");
-      return errno;
-   }
-   printf("The received message is: [%s]\n", receive);
-   printf("End of the program\n");
-   return 0;
-}
-
-
-
-
-
-
-
-#include <linux/unistd.h>
-#include <sys/syscall.h>
-#include <sys/types.h>
-#include <stdio.h>
-#include <string.h>
-char get[1024];
-
 int main (int argc, char argv[]){
 	int dev,ret;
 	dev = open("/dev/pa2_character_device");
@@ -147,4 +96,3 @@ int main (int argc, char argv[]){
 	ret = read(dev,get,130);
 	printf("%d\n", strlen("hello"));
 }
-*/
