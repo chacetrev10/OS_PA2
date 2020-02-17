@@ -37,11 +37,9 @@ chtr8005@colorado.edu
 (This will create kernel module which allows you to insert module into kernel)
 
 3)sudo insmod pa2_char_driver.ko 
+(Type lsmod or dmesg to see if module was inserted correctly)
 
-4)lsmod  
-(go through list to make sure module has been inserted)
-
-5)sudo mknod –m 777 /dev/pa2_character_device c 240 0
+4)sudo mknod –m 777 /dev/pa2_character_device c 240 0
 (This will create the device file that the device driver is associated with)
 
 
@@ -52,9 +50,17 @@ chtr8005@colorado.edu
 2)./pa2Test
 
 3)Follow program instructions. When using seek function, corresponding whence values:
+
 whence = 0 (SEEK_SET): the current position is set to the value of the offset
 whence = 1 (SEEK_CUR): the current position is incremented by offset bytes (note that offset can be negative). 
 whence = 2 (SEEK_END): the current position is set to offset bytes before the end of the file
+
+
+**When done using LKM:**
+
+sudo rmmod pa2_char_driver
+
+(Type lsmod or dmesg to see if module exited correctly)
 
 
 
