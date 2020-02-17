@@ -37,9 +37,11 @@ chtr8005@colorado.edu
 (This will create kernel module which allows you to insert module into kernel)
 
 3)sudo insmod pa2_char_driver.ko 
+
 (Type lsmod or dmesg to see if module was inserted correctly)
 
 4)sudo mknod –m 777 /dev/pa2_character_device c 240 0
+
 (This will create the device file that the device driver is associated with)
 
 
