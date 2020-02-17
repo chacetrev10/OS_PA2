@@ -5,12 +5,6 @@
 Chace Trevino
 chtr8005@colorado.edu
 
-**cs3753_add.c**
-
--This file is the source code for the system call that completes the addition of two integers and copies result to user space.
-
-Path: /home/kernel/linux-hwe-4.15.0/arch/kernel/cs3753_add.c
-
 
 
 **Makefile**
