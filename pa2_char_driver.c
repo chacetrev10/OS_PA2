@@ -10,7 +10,6 @@
 
 /* Define device_buffer and other global data structures you will need here */
 
-int currentBuffer = 0;
 char *device_buffer;
 int openCount =0;
 int closeCount =0;
