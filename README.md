@@ -54,7 +54,9 @@ chtr8005@colorado.edu
 3)Follow program instructions. When using seek function, corresponding whence values:
 
 whence = 0 (SEEK_SET): the current position is set to the value of the offset
+
 whence = 1 (SEEK_CUR): the current position is incremented by offset bytes (note that offset can be negative). 
+
 whence = 2 (SEEK_END): the current position is set to offset bytes before the end of the file
 
 
