@@ -83,16 +83,3 @@ int main(){
 
 
 
-
-
-
-
-   
-
-int main (int argc, char argv[]){
-	int dev,ret;
-	dev = open("/dev/pa2_character_device");
-	ret = write(dev,"hello",strlen("hello"));
-	ret = read(dev,get,130);
-	printf("%d\n", strlen("hello"));
-}
