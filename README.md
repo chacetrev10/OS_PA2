@@ -34,7 +34,7 @@ chtr8005@colorado.edu
 1)Download files
 
 2)sudo make -C /lib/modules/$(uname -r)/build M=$PWD modules   
-(This will create kernel module which allows you to insert module into kernel)
+(This will compile the the module and create kernel module which allows you to insert module into kernel)
 
 3)sudo insmod pa2_char_driver.ko 
 
